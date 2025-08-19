@@ -1,0 +1,97 @@
+/* Tùy chỉnh chung */
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --card-bg-color: #fff;
+  --link-color: #007bff;
+  --hover-link-color: #0056b3;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+header {
+  background: var(--card-bg-color);
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  color: var(--link-color);
+  margin: 0;
+}
+
+/* Bài viết */
+.post {
+  background: var(--card-bg-color);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.post:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.post-meta {
+  font-style: italic;
+  color: #888;
+}
+
+.read-more {
+  display: inline-block;
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: color 0.3s;
+}
+
+.read-more:hover {
+  color: var(--hover-link-color);
+}
+
+/* Nút chuyển chế độ */
+#mode-toggle {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#mode-toggle:hover {
+  background-color: #555;
+}
+
+/* Chế độ Tối (Dark Mode) - sẽ được thêm bằng JavaScript */
+body.dark-mode {
+  --bg-color: #1a1a1a;
+  --text-color: #eee;
+  --card-bg-color: #2c2c2c;
+  --link-color: #87ceeb;
+  --hover-link-color: #5b9db0;
+}
